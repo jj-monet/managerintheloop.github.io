@@ -79,12 +79,13 @@
   .what-i-do { background: var(--warm-white); padding: 100px 64px; }
   .what-i-do-inner { max-width: 1100px; margin: 0 auto; }
   .section-eyebrow { display: inline-block; font-size: 11px; font-weight: 500; letter-spacing: 0.2em; text-transform: uppercase; color: var(--amber); margin-bottom: 56px; }
-  .what-i-do-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 64px; align-items: start; }
+  .what-i-do-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 28px; align-items: stretch; }
+  .wid-item { background: #fff; border: 1px solid #e0dbd0; border-top: 3px solid var(--amber); border-radius: 4px; padding: 36px 32px; display: flex; flex-direction: column; }
   .wid-item-label { font-size: 11px; font-weight: 500; letter-spacing: 0.18em; text-transform: uppercase; color: var(--amber); margin-bottom: 12px; }
   .wid-item-title { font-family: 'Playfair Display', serif; font-size: 26px; font-weight: 700; color: var(--dark); margin-bottom: 16px; line-height: 1.2; }
-  .wid-item-desc { font-size: 15px; font-weight: 300; color: var(--text-mid); line-height: 1.7; margin-bottom: 20px; }
-  .wid-link { color: var(--amber); font-size: 14px; font-weight: 400; text-decoration: none; border-bottom: 1px solid rgba(212,136,26,0.3); padding-bottom: 2px; transition: color 0.2s, border-color 0.2s; }
-  .wid-link:hover { color: var(--amber-bright); border-color: rgba(212,136,26,0.7); }
+  .wid-item-desc { font-size: 15px; font-weight: 300; color: var(--text-mid); line-height: 1.7; flex: 1; }
+  .wid-link { display: block; margin-top: 28px; background: var(--amber); color: #fff; font-family: 'DM Sans', sans-serif; font-size: 14px; font-weight: 500; letter-spacing: 0.05em; text-decoration: none; padding: 14px 24px; border-radius: 3px; text-align: center; transition: background 0.2s, transform 0.15s; }
+  .wid-link:hover { background: var(--amber-bright); transform: translateY(-1px); }
   /* ── About section ── */
   .about-section { background: var(--cream); padding: 100px 64px; border-top: 1px solid #e0dbd0; }
   .about-inner { max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: 340px 1fr; gap: 80px; align-items: start; }
@@ -107,7 +108,7 @@
   .contact-linkedin:hover { color: var(--amber-bright); border-color: rgba(212,136,26,0.7); }
   @media (max-width: 900px) {
     .what-i-do { padding: 60px 28px; }
-    .what-i-do-grid { grid-template-columns: 1fr; gap: 48px; }
+    .what-i-do-grid { grid-template-columns: 1fr; gap: 20px; }
     .about-section { padding: 60px 28px; }
     .about-inner { grid-template-columns: 1fr; gap: 40px; }
     .about-img { max-width: 280px; border-radius: 50%; }
