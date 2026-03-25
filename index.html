@@ -21,11 +21,12 @@
   .nav-links { display: flex; gap: 40px; list-style: none; }
   .nav-links a { font-size: 13px; font-weight: 400; letter-spacing: 0.06em; color: var(--text-light); text-decoration: none; opacity: 0.7; transition: opacity 0.2s; }
   .nav-links a:hover { opacity: 1; }
-  .hero { position: relative; min-height: 100vh; display: flex; align-items: center; justify-content: center; overflow: hidden; background: var(--dark); }
+  .hero { position: relative; min-height: 100vh; display: flex; align-items: center; overflow: hidden; background: var(--dark); }
+  .hero::before { content: ''; position: absolute; inset: 0; z-index: 2; pointer-events: none; background: linear-gradient(to right, var(--dark) 42%, rgba(24,22,16,0.6) 62%, transparent 80%), linear-gradient(to bottom, var(--dark) 0%, transparent 14%, transparent 82%, var(--dark) 100%); }
   .hero-texture { position: absolute; inset: 0; z-index: 0; opacity: 0.15; background-size: 400px 400px; }
-  .hero-glow { position: absolute; inset: 0; z-index: 1; pointer-events: none; background: radial-gradient(ellipse 55% 60% at 75% 55%, rgba(212,136,26,0.13) 0%, transparent 70%), radial-gradient(ellipse 35% 40% at 15% 75%, rgba(224,90,58,0.07) 0%, transparent 60%); }
-  .hero-left { padding: 140px 48px 100px 64px; position: relative; z-index: 2; max-width: 760px; width: 100%; }
-  .masthead-logo { width: 220px; height: auto; display: block; margin-bottom: 40px; }
+  .hero-glow { position: absolute; inset: 0; z-index: 1; pointer-events: none; background: radial-gradient(ellipse 55% 60% at 75% 55%, rgba(212,136,26,0.18) 0%, transparent 70%), radial-gradient(ellipse 35% 40% at 15% 75%, rgba(224,90,58,0.07) 0%, transparent 60%); }
+  .hero-bleed-img { position: absolute; top: -30px; right: -50px; width: 540px; height: auto; z-index: 1; opacity: 0.88; border-radius: 10px; }
+  .hero-left { padding: 140px 48px 100px 64px; position: relative; z-index: 3; max-width: 620px; width: 100%; }
   .eyebrow { display: inline-block; font-size: 11px; font-weight: 500; letter-spacing: 0.2em; text-transform: uppercase; color: var(--amber-bright); margin-bottom: 28px; }
   .hero-headline { font-family: 'Playfair Display', serif; font-size: clamp(42px, 4.5vw, 68px); font-weight: 900; line-height: 1.05; color: #fff; margin-bottom: 12px; }
   .hero-headline em { font-style: italic; color: var(--coral-light); }
@@ -64,7 +65,7 @@
     nav { padding: 24px 28px; } .nav-links { display: none; }
     .hero { min-height: auto; }
     .hero-left { padding: 120px 28px 60px; }
-    .masthead-logo { width: 160px; }
+    .hero-bleed-img { display: none; }
     .below-fold { padding: 60px 28px; }
     .below-fold-inner { grid-template-columns: 1fr; gap: 40px; }
     .book-strip { padding: 28px; flex-direction: column; align-items: flex-start; }
@@ -125,8 +126,8 @@
 <section class="hero">
   <div class="hero-texture"></div>
   <div class="hero-glow"></div>
+  <img class="hero-bleed-img" src="images/MITL AB2.png" alt="Manager in the Loop">
   <div class="hero-left">
-    <img class="masthead-logo" src="images/MITL AB2.png" alt="Manager in the Loop">
     <span class="eyebrow">For managers who work with humans (and, fine, AI too)</span>
     <h1 class="hero-headline">Most <em class="amber">people</em> problems are <em class="coral">system</em> problems.</h1>
     <div class="hero-subhead">Be the one who knows the difference.</div>
